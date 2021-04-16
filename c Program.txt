@@ -1,0 +1,1115 @@
+ 
+			c programming
+			=============
+
+Program:
+=======
+	program is a Set of instruction.
+	instruction is used to do a specific task.
+
+
+Types of Language:
+==================
+1.High Level Language
+2.Middle Level Language
+3.Low Level Language
+
+
+1.High Level Language:
+======================
+	Human Communication(speaking) Language.
+(English,Tamil,hindi,urdu,malayalam,Chinese,Japanese,Etc........)
+
+2.Middle Level Language:
+========================
+	Convert high level language to low level language.
+	(interpreter,compiler)
+
+3.Low Level Language:
+=====================
+	Machine understandable Language
+	Binary Values.(bits--->0 or 1)
+
+******************************************************************************
+			c Programming
+
+Introduction:
+=============
+Develaped by Dennis Ritchie.
+when----1972 at AT&T BELL laboratories.
+
+Influenced by CPL,BCPL,B Language.
+CPL----Combined Programming Language
+BCPL---Basic Combined Programming Language
+B Language
+cpl,bcpl,B language are interpreter Langauge.
+
+Interpreter:
+============
+Need to convert the high level into low level language.
+before converting the program it need to check the program have any errors.
+
+The interpreter will checks the error in line by line.
+if there any error in a line it will stop the error checking process in that  line.
+when the error was cleared then it will check next line.
+
+c Language------compiler Language
+
+Compiler:
+========
+Need to convert the high level into low level Language.
+before converting the program it need to check the program have any errors.
+
+once checks the whole program and display all errors.
+
+Software Availability:
+======================
+
+1.notepad+command prompt
+2.compiler----turbo C
+3.IDE(Integrated Development Environment )-------codeblocks,visual studio
+4.online compiler
+
+How TO Run C Program:
+=====================
+software name---> Turbo c
+
+file----> New
+file ----> save----format(name.c)--->.c extension
+
+    ---->FileName.c
+   |	  (code)
+error	    |
+   |	Compiler(Alt+f9)
+   |	    |
+   |	    |
+   ---check erroe	
+	    |
+	    |
+	no error
+	    |
+	    |
+	FileName.obj(object file)
+	    |
+	    |
+	  run(ctrl+f9)
+	    |
+            |
+	FileName.exe
+
+when run a program it will create 3 file
+	1.FileName.c
+	2.FileName.Obj
+	3.FileName.exe
+	
+1.FileName.c:
+=============
+	.c is  Extension of c program.
+	High level Language file.
+	when these file was opened it understandable and 
+readable by human.
+
+
+2.FileName.Obj:
+===============
+	.obj is extension  
+	.obj ---> object file
+	Low Level Language file.
+	when these file was opened it can't understandable and 
+unreadable by human.
+	it can read by computer
+
+3.FileName.exe:
+===============
+	.exe is a extension
+	.exe ----> execution file or Application file.
+	
+Structure of C program:
+=======================
+
+
+Documention Section
+
+preprocessor Directives(Header files)
+
+return_type main()
+{
+  statements;
+}
+
+
+Documentation Section:
+======================
+we provide some details about program.
+
+1.single line comment(//):
+==========================
+//hide the details of that line.
+
+2.Multi Line Comment:(/*.......*/)
+==================================
+
+/*----starting before the details
+
+	details
+
+*/---after  ending the details
+
+Variable:
+=========
+it is user defined text.
+
+we need store and reuse/access the data from memory.
+we need to provide a name for that data.
+the name is called variable.
+
+Rules:
+======
+a-z,A-Z are accepted
+case sensitive.(uppercase and lower case are not equal).
+start with character or underscore(_).
+Do not start with Number.
+mixed character and numer are allowed.
+single variable b/w space not allowed
+special Characters are not allowed except underscore(_).
+Keyword(Reserve Word) are not allowed.
+
+
+Data types:
+===========
+1.integer
+2.float 
+3.double
+4.character
+
+Syntax 1:
+=========
+
+datatype variable;
+variable=value;
+
+ex:
+int a;//var declaration
+a=10;//value initialization
+
+int b;
+b=20;
+
+Syntax 2:
+=========
+datatype variable=value;
+
+EX:
+
+int a=10;//variable declation and value initialization
+
+int b=20;
+
+
+Syntax 3:
+=========
+datatype var_1=v1,var_2=v2.......var_n=vn;
+
+Ex:
+int a=10,b=20,c;
+
+1.integer:
+==========
+integer contain positive number , negative number and zero.
+
+keyword:  int   
+format specifier:(%i or %d)
+ex:10,299,999,10000,-500,0
+
+
+2.float:
+========
+point values(1.46,-45.90)
+precision --- 6 digit
+
+keyword : float
+format specifier : %f
+
+
+3.double: 
+=========
+point value but it display high precision range.
+
+keyword : double
+format specifier : %le or %lg or %lf
+
+
+4.character: 
+============
+(only one character allowed)
+alphabet(a-z,A-Z),0-9,symbols
+
+keyword : char
+format specifier : %c
+
+
+5.long integer:
+===============
+high values
+
+keyword : long int
+format specifier : %li or % ld
+
+Printf Statements:
+==================
+
+printf("Text & Escape Sequance");
+printf("Format Specifier & Escape Sequance",variable);
+printf("Text &  Escape Sequance & Format Specifier ",variable);
+
+
+Escape sequance:
+================
+\n-----new line
+\"-----Double Quotes
+\'-----Single Quotes
+\t-----Horizontal Tab
+\b-----Backspace
+\?-----Question Mark
+\0-----NUll(nothing after the line)
+
+Size And Range and address operator:
+====================================
+character---1 byte ----(-128 to 127)
+Integer ----2 byte ----(-32768 to 32767)
+float ------4 byte
+double------8 byte
+long int----4 byte----(-2,147,483,648 to 2,147,483,647)
+
+scanf Statement:
+================
+To get the value in output screen.
+
+output screen/run time screen/dynamic screen/late binding
+
+scanf("Format specifier",&variable);
+
+Example:
+========
+scanf("%d",&var);
+
+Operator:
+=========
+
+1.Arithmatic Operator
+2.Relational Operator
+3.Logical Operator
+4.Bitwise Operator
+5.Assignment Operator
+6.unary or Increment/Decrement Operator
+7.Ternery or Conditional Operator
+
+1.Arithmatic Operator:
+======================
+(+)-----Addition
+(-)-----Subtraction
+(*)-----Multiplication
+(/)-----Division
+(%)-----Modulas
+
+
+2.Relational Operator:
+======================
+It compare two values,
+if the condition is true ,it will return "1".
+if the condition is false ,it will return "0".
+
+
+(==)-----Equal To
+(!=)-----Not Equal To
+(<=)-----Less Than Or Equal TO
+(>=)-----Greater Than Or Equal TO
+(<)-----Less Than
+(>)-----Greater Than
+
+3.Logical Operator:
+===================
+(&&,||,!)
+
+(&&)----Logical AND
+
+it checks the two or more condition 
+when all condition is true,that the time it return "1" .
+if any one is false,it will returns "0".
+
+(||)----Logical OR
+it checks the two or more condition 
+if any one is True,it will returns "1".
+when all condition is false,that the time it return "0" .
+
+(!)-----Logical NOT
+
+if the condition is true ,it will return "0".
+if the condition is false ,it will return "1".
+
+4.Bitwise Operator:
+===================
+(&)----Binary AND Operator
+(|)----Binary OR Operator
+(^)----Binary Ex-OR Operator
+(~)----1's Complement
+(<<)----Left Shift Operator
+(>>)----Right Shift OPerator
+
+
+5.Assignment Operator:
+======================
+(=)-------a=10
+(+=)-----a+=10 or a=a+10
+(-=)------a-=10 or a=a-10
+(*=)-----a*=10 or a=a*10
+(/=)-----a/=10 or a=a/10
+(%=)----a%=10 or a=a%10
+(&=)----a&=10 or a=a&10
+(|=)-----a|=10 or a=a|10
+(^=)----a^=10 or a=a^10
+(<<=)--a<<=1 or a=a<<1
+(>>=)--a>>=1 or a=a>>1
+
+6.unary or Increment/Decrement Operator:
+========================================
+
+increment/decrement by 1
+
+pre increment------(++a or a=1+a)//first inc then print
+post increment-----(a++ or a=a+1)//1st print then inc
+
+pre decrement------(--a or a=-1+a)//1st dec then print
+post decrement-----(a-- or a=a-1)//1st print then dec
+
+7.Ternary or Conditional Operator:
+==================================
+
+Syntax:
+=======
+
+(condition)?True expression:False expression;
+
+Typecasting:
+===========
+converting one data type into another.
+
+Type:
+=====
+1.Implicit Typecasting
+2.Explicit Typecasting
+
+
+size
+char---------->int---------->float------------>double
+
+
+1.Implicit Typecasting:
+=======================
+automatic conversion for one data type to another.
+
+int i=10;
+float p=i;
+printf(f)
+
+
+2.Explicit Typecasting:
+=======================
+manually convert one type to another.
+
+upcasting---------lower to upper(no data loss)
+downcasting-----upper to lower(data loss)
+
+
+keyword:
+========
+(datatype)var;
+
+
+
+Declarations of Constants in c:
+===============================
+
+Types:
+======
+using 'const' keyword
+using preprocessor Directives(#define)
+
+Const keyword:
+==============
+
+Syntax:
+=======
+const Datatype Variable= value;
+
+Ex:
+===
+
+const float pi=3.14;
+
+Preprocessor Directives:
+========================
+
+#define name value
+
+Ex:
+===
+
+#define pi 3.14
+
+Control statements:
+====================
+1.Conditional Control statements
+2.COnditional Looping statements
+3.Unconditional control statements
+
+Conditional Control Statements:
+===========================
+1.Decision control statements
+2.selection control statements
+
+
+
+1.if statements
+2.if-else statements
+3.if-else-if or ladder if-else statements
+4.Nested if-else statements
+
+1.if statements:
+================
+It will check the condition 
+when it will be true then  excutes true statements only.
+
+Syntax 1:
+=========
+//this syntax can used for one line statements
+
+if(condition)
+statements;
+
+syntax 2:
+=========
+//this syntax can used for Multi line statements
+
+if(condition)
+{
+statements;
+statements;
+}
+
+2.if-else statements:
+=====================
+It will check the condition 
+when it will be true will excutes (if)true statements.
+when it will be false will excutes (else)false statements.
+
+Syntax 1:
+=========
+//this syntax can used for one line statements
+
+if(condition)
+statements;
+else
+statements;
+ 
+syntax 2:
+========
+//this syntax can used for Multi line statements
+
+if(condition)
+{
+statements;
+statements;
+}
+else
+{
+statements;
+statements;
+statements;
+}
+
+3.ladder if-else or if-else-if statements:
+==========================================
+
+syntax:
+=======
+if(condition)
+{
+  statements;
+} 
+ 
+else if(condition)
+{
+  statements;
+}
+
+else if(condition)
+{
+  statements;
+}
+
+else
+{
+  statements;
+}
+
+4.Nested if-else statements:
+============================
+
+Syntax:
+
+if(condition)
+{
+  if(condition)
+  {	
+    statemets;
+  }
+  else
+  {
+     statements;
+  }		
+}
+else
+{
+  if(condition)
+  {	
+    statemets;
+  }
+  else
+  {
+     statements;
+  }	
+}
+
+2.selection control statements:
+===============================
+switch-case statement
+
+switch-case statement:
+===================
+
+Syntax:
+=======
+switch(Expression)
+{
+	case value1:
+	statements;
+	break;
+	case value2:
+	statements;
+	break;
+	.
+	.
+	.
+	.	
+	case value_n:
+	statements;
+	break;
+	default:
+	statements;
+	break;//optional
+}
+
+
+Looping Statements:
+===================
+set of process continuosly Executes till condition is false.
+
+steps:
+======
+1.initialize
+2.condition
+3.true--->statement
+4.update(inc/dec)
+5.back to step 2
+6.false--->Exit the loop
+
+Types:
+======
+1.while loop
+2.do-while loop
+3.for loop
+
+1.while loop:
+=============
+condition checks and then done the process.
+entry check loop.
+syntax:
+=======
+
+ini;
+while(condi)
+{
+  statement;
+  update;//inc/dec
+}
+
+2.do-while loop:
+================
+process done then checks the Condition 
+Exit check loop.
+
+syntax:
+====== 
+ini;
+do
+{
+  statement;
+  update;//inc/dec
+}while(condi);
+
+for loop:
+=========
+
+syntax:
+=======
+
+for(ini;condi;update)
+{
+   statements;
+}
+
+
+Unconditional Control Statements:
+=================================
+
+break
+continue
+
+1.break:
+========
+
+when break is excutes it will exit the loop.
+
+keyword:
+========
+break;
+
+2.continue:
+===========
+
+when continue is excutes it will skip the iteration of the loop.
+
+keyword:
+========
+continue;
+
+
+Array:
+======
+collection of similar type data which has stored in single variable.
+
+1,2,3,4,5,6,7,8
+
+Type of array:
+==============
+
+1.One dimensional Array
+2.Two Dimensional Array
+3.Multi Dimensional Array
+
+1.One dimensional Array:
+========================
+it is a vector array
+it have only a magnitude & direction.
+    
+syntax:
+=======
+
+datatype variable[size]={number of values};
+datatype variable[]={number of values};//Empty array use if  only value initializing in early binding
+
+
+Example:
+
+int i[5]={1,2,3,4,5};
+int i[]={1,2,3,4,5};
+
+
+2.Two Dimensional Array:
+======================
+
+it is a Matrix Format.
+
+
+Syntax:
+======
+
+var[row size][column size]={number of (rowsize*columnsize)  value};
+var[][column size]={number of (rowsize*columnsize)  value};
+
+
+Ex:
+var[2][2]={1,2,3,4};
+var[][2]={1,2,3,4};
+var[][2]={1,2,3};
+
+
+3.Multi Dimensional Array:
+======================
+
+it is a sheet.
+
+syntax:
+======
+
+var[sheet size][row size][column size]={number of(sheet size * row size * column size) values}
+
+Ex:
+===
+val[2][2][2]={1,2,3,4,5,6,7,8}
+
+String:
+======
+
+Collection of character.
+array of character.
+
+syntax:
+=======
+scanf(“%[^\n]%*c”, str);
+char var[size]="Sentence ";
+
+gets(variable)------instead of scanf. get the input from runtime for name with space.
+puts(variable)-----to print gets data
+
+string Function:
+================
+#include<string.h>
+
+strcpy -------- string copy 
+strlen -------- string length
+strupr -------- string upper
+strlwr -------- string lower
+strcmp -------- string compare 
+strrev -------- string reverse
+strcmpi-------- string compare ignore case
+strcat -------- string concatenate
+
+Functions:
+=========
+
+function is a self contained programming structure.
+
+code reusability.
+
+Type:
+====
+1.Function Without arguments and no return type
+2.Function With arguments and no return type
+3.Function Without arguments and with return type
+4.Function With arguments and  return type 
+
+
+called Function:
+================
+Multiple line
+outside main
+use only one
+datatype ,variable
+server
+no semi colon 
+
+calling Function:
+=================
+one line
+inside main
+use many time
+no need to provide data type and variable
+client
+semicolon must
+value 
+
+
+1.Function Without arguments and no return type:
+================================================       	 
+
+syntax:
+======
+void function()	//called function
+{
+  statements;
+}
+
+void main()
+{
+   function();	//calling function
+}
+
+2.Function With arguments and no return type:
+=============================================
+
+syntax:
+======
+void function(arg1,arg2...arg_n)	//called function
+{
+  statements;
+}
+
+void main()
+{
+   function(arg1,arg2,.......arg_n);	//calling function
+}
+
+3.Function Without arguments and with return type:
+==================================================
+
+syntax:
+=======
+
+returntype function()
+{
+
+return var;
+}
+
+void main()
+{
+
+var=function();
+}
+
+4.Function With arguments and  return type :
+============================================
+syntax:
+=======
+
+returntype function(arg)
+{
+
+return var;
+}
+
+void main()
+{
+
+var=function(arg);
+}
+
+
+
+
+Storage class:
+============
+1.automatic variable
+2.External variable
+3.static variable
+4.Register variable
+
+pointer:
+=======
+To store one variable address in another variable.
+
+Syntax:
+datatype *var;
+
+
+call by value and call by Reference:
+=====================================
+
+call by value:
+===============
+(xerox document)
+passing arguments  with value.
+here passing value can't affected.
+
+userfunc(int a)
+{
+
+}
+void main()
+{
+userfunc(var)
+}
+
+call by reference:
+==================
+(original documents)
+passing arguments  with reference(address).
+here passing value can be affected.
+
+userfunc(int *a)
+{
+
+}
+void main()
+{
+userfunc(&var)
+}
+*******************************************************
+structure:
+=========
+collection of different data types.
+
+syntax:
+=======
+struct structurename
+{
+  int a;//member var
+  float b;
+};
+
+struct structurename var;//call
+
+var.member var=value;//access the member var
+
+
+union
+
+enum
+
+typedef
+
+
+Memory Management:
+==================
+
+static memory allocation 
+dynamic memory allocation
+
+
+
+static memory Allocation:
+=========================
+case 1: 
+
+char name[10];
+original size ----10 bytes
+
+kavi
+
+used size ---4 bytes
+waste size ----> 6 bytes
+
+
+case 2: 
+
+
+char name[10];
+original size ----10 bytes
+
+Purushothaman
+used size ---13 bytes
+
+but not enough 3 bytes.
+
+dynamic memory allocation:
+===========================
+
+Type:
+======
+1.malloc()
+2.calloc
+3.realloc
+4.free()
+
+1.Memory Allocation(malloc)
+
+Syntax:
+=======
+ptr_var=(casttype*)malloc(size);
+ptr_var=(datatype*)malloc(size);
+
+2.free()
+========
+delete the allocated memory
+
+syntax:
+========
+free(ptr_var);
+
+
+3.realloc:
+==========
+Reallocation
+modify the allocated memory.
+
+syntax:
+=======
+ptr_var=realloc(ptr_var,size);
+
+4.contiguous Allocation(Calloc):
+================================
+
+Syntax:
+=======
+ptr_var=(casttype*)calloc(n,size);
+ptr_var=(datatype*)calloc(n,size);
+
+console input and output:
+=========================
+
+1.formatted i/o
+2.unformatted i/o.
+
+1.Formatted i/o:
+================
+printf()
+scanf()
+
+2.unformatted i/o:
+===================
+
+char:
+=====
+getch(),putch()
+getche(),putch()
+getchar(),putch()
+
+string:
+=======
+gets(),puts()
+
+File concept:
+=============
+collection of records.
+To store the data permanently.
+
+program data ----> notepad
+
+
+basic operation of file:
+========================
+
+1.create & open the file
+2.read/write the data from/to the file
+3.close the file---fclose()
+
+Inbuild Function:
+=================
+
+EOF-----end of file
+NULL
+fopen()----file open
+fgetc----file get character
+fputc----file put character
+fprintf()
+fscanf()
+fclose()
+
+
+1.create & open the file:
+=========================
+
+FILE *ptr;
+ptr=fopen("path,name","mode")
+
+mode:
+=====
+w----(program-->file(notepad))write the data to file
+r----(file(notepad) --> program)read the data from file
+a----(program---->notepad old+new)append the data to file
+
+2.write tha data:
+=================
+syntax:
+=======
+fprintf(fp,"prompt");
+
+3.read the data
+===============
+fscanf(fp,"format specifier",var);
+
+4.close the file:
+=================
+fclose(ptr_var);
