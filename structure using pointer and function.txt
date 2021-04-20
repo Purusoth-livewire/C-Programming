@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+struct human
+{
+  char name[20];
+  int age;
+  char gender[10];
+};
+
+void display(struct human *h)
+{
+   printf("name : %s\n",h->name);
+   printf("age  : %d\n",h->age);
+   printf("gender : %s\n",h->gender);
+
+}
+
+void main()
+{
+  struct human h1={"nisanth",18,"male"};
+
+  clrscr();
+  display(&h1);
+
+
+  getch();
+}
+
+
